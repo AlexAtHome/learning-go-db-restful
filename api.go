@@ -3,7 +3,6 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	"os"
 
 	"github.com/go-sql-driver/mysql"
 )
@@ -22,8 +21,8 @@ type Album struct {
 func Connect() error {
 	// connection props
 	cfg := mysql.Config{
-		User:                 os.Getenv("DBUSER"),
-		Passwd:               os.Getenv("DBPASS"),
+		User:                 "admin",
+		Passwd:               "qwerty",
 		Net:                  "tcp",
 		Addr:                 "127.0.0.1:3306",
 		DBName:               "recordings",
